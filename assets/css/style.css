@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+:root {
+  font-size: clamp(40%, 1% + 2vw, 62.5%);
+
+  --font-text-color-primary: #323238;
+  --font-text-color-secondary: #fff;
+
+  --bg-color: #fff;
+
+  --btn-background-color-primary: #e1e1e6;
+  --btn-background-color-secondary: #02799d;
+}
+
+body,
+button {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  color: var(--font-text-color-primary);
+}
+
+body {
+  background: var(--bg-color);
+}
+
+.sr-only {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  appearance: none;
+}
+
+button {
+  border: 0;
+  background: 0;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  max-width: 120rem;
+  margin: 0 auto;
+  gap: 12rem;
+
+  padding: 2rem;
+
+  height: 100vh;
+}
+
+#timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4.8rem;
+}
+
+#timer #time span {
+  font-size: 12rem;
+}
+
+#controls {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+#timer #controls button {
+  font-size: 4.8rem;
+  cursor: pointer;
+}
+
+/* Sounds controls */
+#sounds-control {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.2rem;
+}
+
+#sounds-control button {
+  font-size: 5.6rem;
+  background: var(--btn-background-color-primary);
+  padding: 4.8rem;
+  border-radius: 2.4rem;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+}
+
+.select {
+  background: var(--btn-background-color-secondary) !important;
+  color: var(--font-text-color-secondary);
+}
+
+/* media screen */
+@media (max-width: 768px) {
+  #app {
+    grid-template-columns: 1fr;
+    gap: 3.2rem;
+  }
+}

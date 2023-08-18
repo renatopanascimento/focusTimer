@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Focus Timer - Pomodoro</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script type="module" src="./src/js/main.js" defer></script>
+  </head>
+  <body>
+    <main id="app">
+      <div id="timer">
+        <div id="time">
+          <span id="minutes">25</span>
+          <span>:</span>
+          <span id="seconds">00</span>
+        </div>
+
+        <div id="controls">
+          <button data-action="play" class="ph ph-play-circle">
+            <span class="sr-only">Play</span>
+          </button>
+          <button class="ph ph-stop-circle" data-action="reset">
+            <span class="sr-only">Stop</span>
+          </button>
+          <button class="ph ph-plus-circle" data-action="increaseTime">
+            <span class="sr-only">increase the timer by 5 minutes</span>
+          </button>
+          <button class="ph ph-minus-circle" data-action="decreaseTime">
+            <span class="sr-only">decrease the timer by 5 minutes</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="sounds-control">
+        <button
+          data-action="florestBackgroundSound"
+          class="ph ph-tree toggle-btn-sound"
+          id="florest-btn"
+        ></button>
+        <button
+          data-action="rainBackgroundSound"
+          class="ph ph-cloud-snow toggle-btn-sound"
+          id="rain-btn"
+        ></button>
+        <button
+          class="ph ph-storefront toggle-btn-sound"
+          id="coffee-btn"
+          data-action="coffeeStoreBackgroundStore"
+        ></button>
+        <button
+          id="fireside-btn"
+          class="ph ph-flame toggle-btn-sound"
+          data-action="firesideBackgroundSound"
+        ></button>
+      </div>
+    </main>
+  </body>
+</html>
